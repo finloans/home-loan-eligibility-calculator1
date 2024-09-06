@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCO BANK HOME LOAN ELIGIBILITY CALCULATOR FOR SALARIED CLASS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .calculator-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            padding: 0;
+            max-width: 400px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .logo-container {
+            background-color: #28a745;
+            padding: 0;
+        }
+
+        .logo-container img {
+            width: 100%;
+            height: auto;
+        }
+
+        .calculator {
+            padding: 20px;
+        }
+
+        .calculator h2 {
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+
+        .calculator label {
+            margin-top: 10px;
+            display: block;
+            text-align: left;
+        }
+
+        .calculator input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .calculator button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .result {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="calculator-container">
+        <div class="logo-container">
+            <img src="logo.png" alt="FinLoans Logo">
+        </div>
+
+        <div class="calculator">
+            <h2>UCO BANK HOME LOAN ELIGIBILITY CALCULATOR FOR SALARIED CLASS</h2>
+
+            <!-- Gross Monthly Income -->
+            <label for="grossSalary">Gross Monthly Income (₹):</label>
+            <input type="number" id="grossSalary" placeholder="Enter gross salary">
+
+            <!-- Statutory Deductions (PF, IT, Other) -->
+            <label for="pfDeduction">PF Deduction (₹):</label>
+            <input type="number" id="pfDeduction" placeholder="Enter PF deduction">
+
+            <label for="itDeduction">IT Deduction (₹):</label>
+            <input type="number" id="itDeduction" placeholder="Enter IT deduction">
+
+            <label for="otherDeductions">Other Deductions (₹):</label>
+            <input type="number" id="otherDeductions" placeholder="Enter other deductions">
+
+            <!-- Existing Monthly EMIs -->
+            <label for="existingEMIs">Existing Monthly EMIs (₹):</label>
+            <input type="number" id="existingEMIs" placeholder="Enter existing monthly EMIs">
+
+            <!-- Loan Interest Rate -->
+            <label for="interestRate">Loan Interest Rate (%):</label>
+            <input type="number" id="interestRate" placeholder="Enter interest rate">
+
+            <!-- Loan Tenure -->
+            <label for="loanTenure">Loan Tenure (Years):</label>
+            <input type="number" id="loanTenure" placeholder="Enter loan tenure in years">
+
+            <button onclick="calculateEligibility()">Calculate Eligibility</button>
+
+            <div class="result" id="result"></div>
+        </div>
+    </div>
+
+    <script src="eligibility-calculator.js"></script>
+
+</body>
+</html>
